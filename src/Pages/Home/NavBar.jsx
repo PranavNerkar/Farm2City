@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import logo from "./../../images/Home/logo.png";
-// import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 const NavigationBar = () => {
   const [flag1, setFlag1] = useState(false);
   const [flag2, setFlag2] = useState(false);
   const [flag3, setFlag3] = useState(false);
   const [flag4, setFlag4] = useState(false);
+  
+  let navigator = useNavigate() ;
 
   return (
+
+    // <Routes>
+    //   <Route />
+    // </Routes>
+
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -17,8 +23,7 @@ const NavigationBar = () => {
             <img src={logo} height="42px" width="75px" />
           </a>
           <div class="navbar-brand me-5" style={{ color: "darkgreen" }}>
-            {" "}
-            <b>Farm2City</b>{" "}
+            <b >Farm2City</b>
           </div>
 
           <div
@@ -127,13 +132,17 @@ const NavigationBar = () => {
             <form class="d-flex">
               {/* <Link to="/Farmer-LogIn" target="_blank">
               </Link> */}
-                <button class="btn btn-outline-success me-4 btn-lg">
+                <button class="btn btn-outline-success me-4 btn-lg" onClick={() => {
+                  navigator("/farmer-log-in")
+                }}>
                   Farmer
                 </button>
 
               {/* <Link to="/Buyer-LogIn" target="_blank">
               </Link> */}
-                <button class="btn btn-outline-success btn-lg me-4">
+                <button class="btn btn-outline-success btn-lg me-4" onClick={() => {
+                  navigator("/buyer-log-in")
+                }}>
                   Buyer
                 </button>
 
