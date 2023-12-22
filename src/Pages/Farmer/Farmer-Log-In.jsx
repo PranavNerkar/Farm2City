@@ -49,7 +49,7 @@ function FarmerLogIn() {
       .then((resp) => resp.json())
       .then((data) => {
         const val = data[0].entry;
-        if(val == 1 ){
+        if (val == 1) {
           navigate("/Farmer-Home");
         }
         setMsg(val);
@@ -148,7 +148,10 @@ function FarmerLogIn() {
               </tr>
               <tr>
                 <td colSpan={2}>
-                  <p className="text-center mt-2">Forgot Password</p>
+                  <p className="text-center mt-2" onClick={() => {
+                    navigate("/farmer-log-in/update-password")
+                  }
+                  }>update password</p>
                 </td>
               </tr>
             </tbody>

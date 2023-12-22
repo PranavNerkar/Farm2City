@@ -14,8 +14,8 @@ app.listen(9000, function () {
 var conn = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "mypass",
-  database: "project",
+  password: "root",
+  database: "miniproject",
 });
 
 conn.connect(function (err) {
