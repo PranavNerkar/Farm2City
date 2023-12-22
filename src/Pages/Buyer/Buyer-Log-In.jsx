@@ -148,7 +148,10 @@ function BuyerLogIn() {
               </tr>
               <tr>
                 <td colSpan={2}>
-                  <p className="text-center mt-2">Forgot Password</p>
+                  <p className="text-center mt-2" onClick={() => {
+                    navigate("/buyer-log-in/update-password")
+                  }
+                  }>update password</p>
                 </td>
               </tr>
             </tbody>

@@ -6,6 +6,8 @@ import FarmerLogIn from './Pages/Farmer/Farmer-Log-In';
 import BuyerLogIn from './Pages/Buyer/Buyer-Log-In';
 import FarmerHome from './Pages/Farmer/Farmer-Home';
 import BuyerHome from './Pages/Buyer/Buyer-Home';
+import UpdatePasswordFarmer from './Pages/Farmer/Update-Password';
+import UpdatePasswordBuyer from './Pages/Buyer/Update-Password';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path='/buyer-log-in' element={<BuyerLogIn />}/>
           <Route path='/Farmer-Home' element={<FarmerHome />}/>
           <Route path='/Buyer-Home' element={<BuyerHome />}/>
+          <Route path='/farmer-log-in/update-password' element={<UpdatePasswordFarmer />}/>
+          <Route path='/buyer-log-in/update-password' element={<UpdatePasswordBuyer />}/>
         </Routes>
     </div>
   );
